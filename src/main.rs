@@ -13,9 +13,9 @@ struct Cli {
 
 #[derive(Subcommand, Debug)]
 enum Commands {
-    /// 伪装文件
+    /// 伪装文件 目前仅支持 gz, mp4, txt
     Fake {
-        /// 伪装类型 目前支持 gz, mp4, txt
+        /// 伪装类型 目前仅支持 gz, mp4, txt
         #[clap(value_parser)]
         ftype: String,
 
