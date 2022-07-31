@@ -1,0 +1,21 @@
+[package]
+name = "ftype"
+author = "Borber"
+version = "0.1.1"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "伪装文件类型"
+keywords = ["fake", "file"]
+homepage = "https://github.com/Borber/ftype"
+repository = "https://github.com/Borber/ftype"
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
+readme = "README.md"
+
+[profile.release]
+strip = true
+opt-level = 'z'
+lto = true
+
+[dependencies]
+clap = { version = "3.2.16", features = ["derive"] }
+fake_type = "0.1.4"
